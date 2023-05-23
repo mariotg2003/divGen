@@ -12,12 +12,6 @@ function generar(){
     bolaColor("red")
     bolaColor("red")
     bolaColor("red")
-    bolaColor("red")
-    bolaColor("red")
-    bolaColor("red")
-    bolaColor("red")
-    bolaColor("red")
-    bolaColor("red")
     bolaColorMala("red")
 };
 

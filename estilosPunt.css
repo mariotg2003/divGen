@@ -1,0 +1,50 @@
+#tabla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+    font-size: 30px;
+}
+
+h1{
+    text-align: center;
+    font-size: 60px;
+    color: white;
+}
+
+#puntuacionTabla{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(19,228,230,1) 0%, rgba(2,24,121,1) 0%, rgba(4,148,120,1) 0%, rgba(224,15,15,1) 100%);
+    border: 4px solid black;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+}
+
+
+html{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(214,13,13,1) 0%, rgba(2,24,121,1) 0%, rgba(7,180,194,1) 0%, rgba(204,7,7,1) 100%);
+}
+
+#cambiarJugador{
+    font-size: 20px;
+    text-align: center;
+    height: 30px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#botonVolver:active,#cambiarJugador:active{
+    background-color: rgb(189, 189, 189);
+}
+
+#botonVolver{
+    font-size: 20px;
+    text-align: center;
+    height: 30px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}

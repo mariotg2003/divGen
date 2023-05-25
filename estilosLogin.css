@@ -1,0 +1,96 @@
+#contenedorGrandeFormulario{
+    width: 30%;
+    margin: auto;
+}
+
+h2{
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    text-shadow: 3px  0px 0px black,
+    0px  3px 0px black,
+   -3px  0px 0px black,
+    0px -3px 0px black;
+    font-size: 100px;
+}
+
+html{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(105,121,9,1) 0%, rgba(2,24,121,1) 0%, rgba(194,5,5,1) 0%, rgba(231,127,41,1) 100%);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+}
+
+#formulario{
+    padding-top: 4%;
+    padding-bottom: 4%;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(19,228,230,1) 0%, rgba(2,24,121,1) 0%, rgba(4,148,120,1) 0%, rgba(224,15,15,1) 100%);
+    border: 4px solid black;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.etiquetasFormulario{
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.inputsFormulario{
+    width: 200px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 4px;
+    height: 16px;
+    font-size: 16px;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .inputsFormulario{
+        width: 90%;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 4px;
+        height: 16px;
+        font-size: 16px;
+    
+    }
+
+    #contenedorGrandeFormulario{
+        width: 70%;
+        margin: auto;
+    }
+}
+
+#botonEntrar{
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    border: 1.8px solid white;
+    background-color: rgba(14, 13, 13, 0.432);
+    cursor: pointer;
+}
+
+#botonEntrar:active{
+    background-color: white;
+    color: black;
+    border: 1.8px solid black;
+}
+
+#error{
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}

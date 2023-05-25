@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="estilos.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>divGen</title>
+    <link rel="stylesheet" href="estilosLogin.css">
+    <title>Login</title>
 </head>
 <body>
-    
-    <div id="contenedorGrande">
-        <div id="botones">
-            <div id="puntuacion"></div><br>
-            <div id="botonEmpezar">Empezar</div>
-        </div>
-        <div id="generador"></div>
+    <h2>InGame</h2>
+    <div id="contenedorGrandeFormulario">
+        
+        <form id="formulario" action="juego.html">
+            <label for="nombre" class="etiquetasFormulario">Escribe aquí tu nombre de usuario</label><br><br>
+            <input type="text" id="nombre" name="nombre" class="inputsFormulario"><br><br>
+            <p id="error"></p>
+            <input type="submit" value="Entrar" id="botonEntrar">
+        </form>
     </div>
 </body>
-<script src="generar.js"></script>
+<script src="validarLogin.js"></script>
 </html>

@@ -5,8 +5,12 @@ let bolas=0
 let randomBola
 let puntos = 0
 
-function generar(){
+let queryString = window.location.search;
+let urlParams = new URLSearchParams(queryString);
+let nombre = urlParams.get('nombre');
 
+
+function generar(){
     bolaColor("red")
     bolaColor("red")
     bolaColor("red")
@@ -68,9 +72,23 @@ function recorrerDivs(contenedor) {
     var div = divs[i];
     var clase = div.className;
     
-    if(divs.length==1 && clase=="botonMalo"){
+    if(divs.length==1 && clase=="botonMalo" && nombre!=null){
         alert("Has ganado")
-        window.location.reload()
+        let nombreUsuario=nombre
+        usuario={"nombre":nombreUsuario,"puntos":puntos}
+
+        if (localStorage.getItem("nombres") == null) {
+            let nombres = [];
+            nombres.push(usuario);
+            ArrayNombre = JSON.stringify(nombres);
+            localStorage.setItem("nombres", ArrayNombre);
+        } else {
+            ArrayNombre = JSON.parse(localStorage.getItem("nombres"));
+            ArrayNombre.push(usuario);
+            localStorage.setItem("nombres", JSON.stringify(ArrayNombre));
+        }
+
+        window.location.href = "puntuacion.html";
     }
   }
 }

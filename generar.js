@@ -76,7 +76,7 @@ function recorrerDivs(contenedor) {
     var clase = div.className;
     
     if(divs.length==1 && clase=="botonMalo" && nombre!=null){
-        alert("Has ganado")
+        alert("Has perdido!")
         let nombreUsuario=nombre
         usuario={"nombre":nombreUsuario,"puntos":puntos}
 

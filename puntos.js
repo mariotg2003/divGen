@@ -29,6 +29,7 @@ botonVolver.addEventListener("click",function(){
 })
 
 cambiarJugador.addEventListener("click",function(){
+    localStorage.removeItem("nombre")
     window.location.href = "index.html";
 })
 

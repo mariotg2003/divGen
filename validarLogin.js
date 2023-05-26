@@ -11,6 +11,7 @@ boton.addEventListener("click", function(evento) {
     if (nombre.value == "") {
         error.innerHTML = "Debes introducir un nombre";
     } else {
+        localStorage.setItem("nombre",nombre.value)
         formulario.submit();
     }
 });

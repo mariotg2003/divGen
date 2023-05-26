@@ -5,9 +5,12 @@ let bolas=0
 let randomBola
 let puntos = 0
 
-let queryString = window.location.search;
-let urlParams = new URLSearchParams(queryString);
-let nombre = urlParams.get('nombre');
+
+let nombre = localStorage.getItem("nombre")
+
+if(nombre==null){
+  window.location.href="index.html"
+}
 
 
 function generar(){
@@ -84,12 +87,28 @@ function recorrerDivs(contenedor) {
             localStorage.setItem("nombres", ArrayNombre);
         } else {
             ArrayNombre = JSON.parse(localStorage.getItem("nombres"));
-            ArrayNombre.push(usuario);
+            console.log(ArrayNombre)
+            let esta=false;
+            for (const usuario in ArrayNombre) {
+              if (ArrayNombre[usuario]["nombre"] === nombreUsuario) {
+                ArrayNombre[usuario]["puntos"]=puntos;
+                esta=true
+                break;
+              }
+            }
+
+            if(!esta){
+              ArrayNombre.push(usuario);
+            }
+            
             localStorage.setItem("nombres", JSON.stringify(ArrayNombre));
         }
 
         window.location.href = "puntuacion.html";
+    }else if(nombre==null){
+      alert("No hay nombre")
     }
+    
   }
 }
 
